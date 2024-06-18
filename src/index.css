@@ -14,3 +14,11 @@ code {
 	width: 100vw;
 	text-align: center;
 }
+
+.favorites--description {
+	display: flex;
+	margin-top: 40vmin;
+	font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+	justify-content: center;
+	text-align: center
+}

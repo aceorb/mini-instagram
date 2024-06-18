@@ -23,7 +23,7 @@ export default () => {
 
 	useEffect(() => {
 		/**
-		 * Here we fetch first batch on component mount
+		 * Here we fetch first batch on component mount4
 		 */
 		fetchMore();
 	}, []);
