@@ -1,4 +1,4 @@
-import { ILikedPicture } from './ILikedPicture';
+
 import { IPictureCard } from './IPictureCard';
 
 export interface ILikedContext {

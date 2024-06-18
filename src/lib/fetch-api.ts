@@ -1,25 +1,21 @@
-const apiUrl = 'https://shibe.online/api/shibes?count=';
+import config from '../utils/config';
 
-const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+/**
+ * Function getPictures(count:number)
+ * This function provides functionality of fetching images from https://shibe.online/ API
+ *
+ * @param count specifies how many images should be fetched from api
+ *
+ * caveats:
+ * 1. This API has CORS filtering and therefore must be proxied by some CORS provider that will set CORS
+ * Allow-Origin to the caller address. Otherwise the browser will not allow to consume data from this api
+ */
 
-const standardHeaders = {
-	'Content-Type': 'application/json'
-	// 'Access-Control-Allow-Origin': '*'
-};
-
-export const getPictures = async (count = 16) =>
-	await fetch(`${proxyUrl}${apiUrl}${count}`, {
+export const getPictures = async (count = Number(config.defaultFetchCount)) =>
+	await fetch(`${config.proxyUrl}${config.apiUrl}${count}`, {
 		method: 'GET',
-		headers: standardHeaders
+		headers: { 'Content-Type': 'application/json' }
 	})
 		.then((res) => res.json())
-		.then((json) => {
-			return json;
-		})
-		.catch((err) => {
-			return err;
-		});
-
-// const result = await response.json();
-// return result;
-// return Promise.resolve(result);
+		.then((json) => json)
+		.catch((err) => err);

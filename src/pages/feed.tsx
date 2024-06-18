@@ -1,5 +1,8 @@
 import React from 'react';
-// import Feed from '../components/Feed';
-import InfiniteScroll from '../components/InfiniteScroll';
-
-export default () => <InfiniteScroll />;
+import { PictureCollection } from '../components/PictureCollection';
+/**
+ * On this screen we are going to render
+ * our prepared component with
+ * infinite scroll feature
+ */
+export default () => <PictureCollection />;

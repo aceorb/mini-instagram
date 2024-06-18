@@ -1,0 +1,45 @@
+$liked-red: #de1a1a;
+
+.navbar {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	background-color: white;
+	justify-content: space-around;
+	width: 100%;
+	border-bottom: 1px solid lightgray;
+	a {
+		&:hover {
+			color: $liked-red;
+		}
+	}
+}
+.navbar-menu {
+	flex-grow: 0.5;
+	justify-content: center;
+}
+.navbar-menu .navbar-item {
+	flex-grow: 1;
+	justify-content: center;
+}
+.navbar-menu .navbar-item .control {
+	width: 50%;
+}
+
+.navbar--liked-count {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: $liked-red;
+	text-align: center;
+	color: white;
+	height: 20px;
+	width: 20px;
+	border-radius: 10px;
+}
+
+.navbar--app-title {
+	font-family: 'Cookie', cursive;
+	font-size: 1.5em;
+}

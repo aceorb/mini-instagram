@@ -1,0 +1,28 @@
+.card {
+	margin-top: 5rem;
+	border-radius: 5px;
+}
+.card .header {
+	padding: 5px 10px;
+}
+.card-footer .columns {
+	width: 100%;
+}
+.card-footer .columns input {
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+.card-footer .columns .column:last-child {
+	display: flex;
+	align-items: center;
+}
+.card-footer .columns .column:last-child button {
+	border: none;
+}
+
+.card--insta-image {
+	object-fit: cover;
+	border-radius: 5px 5px 0 0;
+}
+
