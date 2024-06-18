@@ -3947,6 +3947,11 @@ eslint-plugin-jsx-a11y@6.2.3:
     has "^1.0.3"
     jsx-ast-utils "^2.2.1"
 
+eslint-plugin-react-hooks@^0.0.0-b53ea6ca0:
+  version "0.0.0-b53ea6ca0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-0.0.0-b53ea6ca0.tgz#f3d72ba704e6012eb507af0bf7a418666558939c"
+  integrity sha512-yKfkXFUNXmWcha0a8XbBbQFqR9puPMHjoizmoRc8QeiCRyt+CvANLDacfBYrOLNi8ylVSvEDJYC3lERonUyOnw==
+
 eslint-plugin-react-hooks@^1.6.1:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-1.7.0.tgz#6210b6d5a37205f0b92858f895a4e827020a7d04"
@@ -8932,6 +8937,13 @@ react-scripts@3.3.0:
     workbox-webpack-plugin "4.3.1"
   optionalDependencies:
     fsevents "2.1.2"
+
+react-spinners-css@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/react-spinners-css/-/react-spinners-css-1.1.7.tgz#1143ef1051b77a76b2394a8c71db3db520ec0481"
+  integrity sha512-wcnFtGXCgFbIDsPr9CDoDU+F01uojf+ot/jJi4DUfHJ9S/zVRE7lIfSbsSHtIeDltclr3Dq9rHnAUdYaOt4SIg==
+  dependencies:
+    prop-types "^15.7.2"
 
 react-use@^13.12.2:
   version "13.12.2"

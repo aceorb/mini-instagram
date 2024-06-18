@@ -1,22 +1,20 @@
 import React from 'react';
 import FeedPage from '../pages/feed';
 import FavoritesPage from '../pages/favorites';
-interface IRoute {
-	path: string;
-	title: string;
-	page: any;
-}
+import {IRoute} from '../types/IRoute';
 
 const routes: IRoute[] = [
 	{
 		path: '/feed',
-		title: 'Feedd',
-		page: <FeedPage />
+		title: 'Feed',
+		page: <FeedPage />,
+		icon: 'image'
 	},
 	{
 		path: '/favorites',
 		title: 'Favorites',
-		page: <FavoritesPage />
+		page: <FavoritesPage />,
+		icon: 'favorite_border'
 	}
 ];
 

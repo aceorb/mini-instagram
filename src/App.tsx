@@ -1,22 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import './App.css';
 import routes from './routes';
+import { LikedPicturesProvider } from './store/liked-context';
+
+const appName = 'MiniInstagram';
 
 const App: React.FC = () => {
 	return (
-		<div className="App">
-			<Router>
-				{/* <Navigation /> */}
-
-				<Switch>
-					{routes.map((element) => (
-						<Route key={element.title} exact path={element!.path} children={element!.page} />
-					))}
-					<Redirect from="/" to="/feed" />
-				</Switch>
-			</Router>
-		</div>
+		<LikedPicturesProvider>
+			<div className="App">
+				<Navbar />
+				<Router>
+					<Switch>
+						{routes.map((element) => {
+							document.title = `${element.title} | ${appName}`;
+							return <Route key={element.title} exact path={element!.path} children={element!.page} />;
+						})}
+						<Redirect from="/" to="/feed" />
+					</Switch>
+				</Router>
+			</div>
+		</LikedPicturesProvider>
 	);
 };
 
