@@ -1,21 +1,24 @@
-const url = 'https://cors-anywhere.herokuapp.com/https://shibe.online/api/shibes?count=';
+const apiUrl = 'https://shibe.online/api/shibes?count=';
+
+const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+
 const standardHeaders = {
 	'Content-Type': 'application/json'
+	// 'Access-Control-Allow-Origin': '*'
 };
 
 export const getPictures = async (count = 16) =>
-	await fetch(`${url}${count}`, {
+	await fetch(`${proxyUrl}${apiUrl}${count}`, {
 		method: 'GET',
-		headers: standardHeaders,
-		referrerPolicy: 'no-referrer',
-		mode: 'cors'
+		headers: standardHeaders
 	})
 		.then((res) => res.json())
 		.then((json) => {
-			console.log(json);
 			return json;
 		})
-		.catch((err) => err);
+		.catch((err) => {
+			return err;
+		});
 
 // const result = await response.json();
 // return result;
