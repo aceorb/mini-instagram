@@ -8,7 +8,7 @@
 To run this project on your machine  (assuming you have yarn and git installed) run following command in your terminal
 
 ```
-git clone https://github.com/pawelkrystkiewicz/mini-instagram.git && yarn && yarn start
+git clone https://github.com/pawelkrystkiewicz/mini-instagram.git &&  cd ./mini-instagram && yarn && yarn start
 ```
 
 
