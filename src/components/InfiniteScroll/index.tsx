@@ -3,14 +3,9 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import { useAsyncFn } from 'react-use';
 import { getPictures } from '../../lib/fetch-api';
 import PictureCard from '../PictureCard';
-import colors from '../../utils/colors';
-const { Roller } = require('react-spinners-css');
+import { Spinner } from '../Spinner';
 
-const Spinner = () => (
-	<div className="content--centered">
-		<Roller color={colors.blue} />
-	</div>
-);
+
 
 export default () => {
 	const [ state, setState ] = useState([]);
