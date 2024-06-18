@@ -1,9 +1,11 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect, useContext } from 'react';
 import { ILikedPicture } from '../types/ILikedPicture';
 import { ILikedContext } from '../types/ILikedContext';
 import { IPictureCard } from '../types/IPictureCard';
+import config from '../utils/config';
 
-const objectName = 'favorites';
+const objectName = config.localStorageObjectName;
+
 const LikedPicturesContext = createContext<Partial<ILikedContext>>({});
 
 const LikedPicturesProvider = (props: any) => {
@@ -59,7 +61,7 @@ const LikedPicturesProvider = (props: any) => {
 };
 
 function useLikedPictures() {
-	const context = React.useContext(LikedPicturesContext);
+	const context = useContext(LikedPicturesContext);
 	if (context === undefined) {
 		console.error(`useLikedPictures must be used within a LikedPictureProvider`);
 	}

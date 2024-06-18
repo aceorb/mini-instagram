@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import PictureCard from '../components/PictureCard';
 import { useLikedPictures } from '../store/liked-context';
 import { IPictureCard } from '../types/IPictureCard';
-import PictureCard from '../components/PictureCard';
 
 export default () => {
 	const { data } = useLikedPictures();

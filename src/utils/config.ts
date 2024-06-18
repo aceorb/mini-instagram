@@ -1,1 +1,4 @@
-export default {}
+export default {
+  appName: 'MiniInstagram',
+  localStorageObjectName: 'favorites'
+ };
